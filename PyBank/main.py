@@ -54,6 +54,12 @@ with open (csvpath, 'r') as csvfile:
     #Calculating and formatting average change       
 averagechange = round((sum(netchangelist)/len(netchangelist)), 2)
 
+    #Increase/Decrease in profits variables
+increasedate = greatestincrease[0]
+increaseamount = greatestincrease[1]
+decreasedate = greatestdecrease[0]
+decreaseamount = greatestdecrease[1]
+
     
     #Printing results to terminal
 print("Financial Analysis")
@@ -61,8 +67,8 @@ print("---------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${total_revenue}")
 print(f"Average Change: ${averagechange}")
-print(f"Greatest Increase in Profits: {greatestincrease[0],greatestincrease[1]}")
-print(f"Greatest Decrease in Profits: {greatestdecrease[0],greatestdecrease[1]}")
+print(f"Greatest Increase in Profits: {increasedate} (${increaseamount})")
+print(f"Greatest Decrease in Profits: {decreasedate} (${decreaseamount})")
 
     #Setting output path
 outputpath = os.path.join( 'analysis' , 'FinancialAnalysisResults.txt')
@@ -74,8 +80,8 @@ with open(outputpath, 'w') as txtfile:
      txtfile.writelines(f"Total Months: {total_months}")
      txtfile.writelines(f"Total: ${total_revenue}")
      txtfile.writelines(f"Average Change: ${averagechange}")
-     txtfile.writelines(f"Greatest Increase in Profits: {greatestincrease[0],greatestincrease[1]}")
-     txtfile.writelines(f"Greatest Decrease in Profits: {greatestdecrease[0],greatestdecrease[1]}")
+     txtfile.writelines(f"Greatest Increase in Profits: {increasedate} (${increaseamount})")
+     txtfile.writelines(f"Greatest Decrease in Profits: {decreasedate} (${decreaseamount})")
 
 
 
