@@ -75,13 +75,13 @@ outputpath = os.path.join( 'analysis' , 'FinancialAnalysisResults.txt')
 
     #Writing results as a txtfile in analysis folder
 with open(outputpath, 'w') as txtfile:
-     txtfile.writelines("Financial Analysis")
-     txtfile.writelines("-----------------------")
-     txtfile.writelines(f"Total Months: {total_months}")
-     txtfile.writelines(f"Total: ${total_revenue}")
-     txtfile.writelines(f"Average Change: ${averagechange}")
-     txtfile.writelines(f"Greatest Increase in Profits: {increasedate} (${increaseamount})")
-     txtfile.writelines(f"Greatest Decrease in Profits: {decreasedate} (${decreaseamount})")
+     txtfile.write('\n'"Financial Analysis"'\n')
+     txtfile.write('\n'"-----------------------"'\n')
+     txtfile.write(f"\nTotal Months: {total_months}\n")
+     txtfile.write(f"\nTotal: ${total_revenue}\n")
+     txtfile.write(f"\nAverage Change: ${averagechange}\n")
+     txtfile.write(f"\nGreatest Increase in Profits: {increasedate} (${increaseamount})\n")
+     txtfile.write(f"\nGreatest Decrease in Profits: {decreasedate} (${decreaseamount})\n")
 
 
 
