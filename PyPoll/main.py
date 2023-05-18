@@ -27,17 +27,31 @@ with open(electionpath) as electiondata:
 totalvote = sum(cantidatevotes.values())
 
 for i in cantidatevotes:
-    percent = round((float(cantidatevotes[i])/totalvote)*100,2)
+    percent = (round((float(cantidatevotes[i])/totalvote)*100,2))
     print(percent)
+
 
 for key in cantidatevotes.keys():
     if cantidatevotes[key] == max(cantidatevotes.values()):
         winner = key
 
+
+    #Printing results to terminal
 print("Election Results")
 print("----------------------")
 print(f"Total Votes: {totalvote}")
 print("----------------------")
 print(f"Winner: {winner}")
 print("----------------------")
-         
+
+    #Set outputpath
+outputpath = os.path.join('analysis' , 'ElectionResults.txt')
+
+    #Writing results as textfile to analysis folder
+with open(outputpath, 'w') as txtfile:
+    txtfile.write('\n'"Election Results"'\n')
+    txtfile.write('\n'"----------------------"'\n')
+    txtfile.write(f"\nTotal Votes: {totalvote}\n")
+    txtfile.write('\n'"----------------------"'\n')
+    txtfile.write(f"\nWinner: {winner}\n")
+    txtfile.write('\n'"----------------------"'\n')
