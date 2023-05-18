@@ -1,17 +1,25 @@
+    #Import modules
 import os
 import csv
 
+    #Set election csv import path
 electionpath = os.path.join("Resources","election_data.csv")
 
+    #Creating lists
 cantidatevotes = {}
 
+    #Opening csv file with path and skipping header
 with open(electionpath) as electiondata:
     reader = csv.reader(electiondata)
     header = next(reader)
 
+        #For loop
     for row in reader:
 
-        cantidatename = row[2]
+            #Store cantidate names from column 3
+        cantidatename = row[2]        
+
+ 
         if cantidatename in cantidatevotes.keys():
             cantidatevotes[cantidatename] += 1
         else:

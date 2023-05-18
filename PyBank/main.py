@@ -73,7 +73,7 @@ print(f"Greatest Decrease in Profits: {decreasedate} (${decreaseamount})")
     #Setting output path
 outputpath = os.path.join( 'analysis' , 'FinancialAnalysisResults.txt')
 
-    #Writing results as a txtfile to analysis folder
+    #Writing results as a txtfile in analysis folder
 with open(outputpath, 'w') as txtfile:
      txtfile.writelines("Financial Analysis")
      txtfile.writelines("-----------------------")
