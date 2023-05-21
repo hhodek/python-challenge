@@ -5,8 +5,8 @@ import csv
     #Set election csv import path
 electionpath = os.path.join("Resources","election_data.csv")
 
-    #Creating lists
-cantidatevotes = {}
+    #Creating dictionaries
+candidatevotes = {}
 
     #Opening csv file with path and skipping header
 with open(electionpath) as electiondata:
@@ -17,22 +17,21 @@ with open(electionpath) as electiondata:
     for row in reader:
 
             #Store cantidate names from column 3
-        cantidatename = row[2]        
+        candidatename = row[2]        
 
  
-        if cantidatename in cantidatevotes.keys():
-            cantidatevotes[cantidatename] += 1
+        if candidatename in candidatevotes.keys():
+            candidatevotes[candidatename] += 1
         else:
-            cantidatevotes[cantidatename] = 1
-totalvote = sum(cantidatevotes.values())
+            candidatevotes[candidatename] = 1
+totalvote = sum(candidatevotes.values())
 
-for i in cantidatevotes:
-    percent = (round((float(cantidatevotes[i])/totalvote)*100,2))
-    print(percent)
+for candidate, votes in candidatevotes.items():
+    percent = round((votes/totalvote)*100,2)
 
 
-for key in cantidatevotes.keys():
-    if cantidatevotes[key] == max(cantidatevotes.values()):
+for key in candidatevotes.keys():
+    if candidatevotes[key] == max(candidatevotes.values()):
         winner = key
 
 
@@ -40,6 +39,10 @@ for key in cantidatevotes.keys():
 print("Election Results")
 print("----------------------")
 print(f"Total Votes: {totalvote}")
+print("----------------------")
+for candidate, votes in candidatevotes.items():
+    percent = round((votes/totalvote)*100,3)
+    print(f"{candidate}: {percent}% ({votes})")
 print("----------------------")
 print(f"Winner: {winner}")
 print("----------------------")
@@ -53,5 +56,9 @@ with open(outputpath, 'w') as txtfile:
     txtfile.write('\n'"----------------------"'\n')
     txtfile.write(f"\nTotal Votes: {totalvote}\n")
     txtfile.write('\n'"----------------------"'\n')
+    for candidate, votes in candidatevotes.items():
+        percent = round((votes/totalvote)*100,3)
+        txtfile.write(f"\n{candidate}: {percent}% ({votes})\n")
+    txtfile.write("\n----------------------\n")
     txtfile.write(f"\nWinner: {winner}\n")
     txtfile.write('\n'"----------------------"'\n')
