@@ -12,7 +12,7 @@ In both the "PyBank" and "PyPoll" directories, you will find the following compo
 
 2. An "analysis" folder: This folder holds the exported text file that contain the results of the analysis performed by the scripts.
 
-3. A "main.py" file: This file contains the complete Python script that was used for the analysis. It likely includes the necessary code to   read the data from the CSV file in the "Resource" folder, perform the desired calculations or computations, and generate the results,  which are then exported to the "analysis" folder.
+3. A "main.py" file: This file contains the complete Python script that was used for the analysis. It includes the necessary code to read the data from the CSV file in the "Resource" folder, perform the desired calculations or computations, and generate the results,  which are then exported to the "analysis" folder.
 
 # Credits
 1. I worked with tutors, Richa Prakesh, on both PyPoll and PyBank scripts, & Kyle Goode helped me correct an issue with my variables (missing underscores)
