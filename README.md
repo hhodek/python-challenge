@@ -8,11 +8,11 @@ In the second part of the challenge, PyPoll, the objective was to assist a small
 # Directory Structure
 In both the "PyBank" and "PyPoll" directories, you will find the following components:
 
-1. A "Resource" folder: This folder contains the CSV file(s) that were read into the scripts for data analysis.
+1. A "Resource" folder: This folder contains the CSV file that were read into the scripts for data analysis.
 
-2. An "analysis" folder: This folder holds the exported text file(s) that contain the results of the analysis performed by the scripts.
+2. An "analysis" folder: This folder holds the exported text file that contain the results of the analysis performed by the scripts.
 
-3. A "main.py" file: This file contains the complete Python script that was used for the analysis. It likely includes the necessary code to   read the data from the CSV file(s) in the "Resource" folder, perform the desired calculations or computations, and generate the results,  which are then exported to the "analysis" folder.
+3. A "main.py" file: This file contains the complete Python script that was used for the analysis. It likely includes the necessary code to   read the data from the CSV file in the "Resource" folder, perform the desired calculations or computations, and generate the results,  which are then exported to the "analysis" folder.
 
 # Credits
 1. I worked with tutors, Richa Prakesh, on both PyPoll and PyBank scripts, & Kyle Goode helped me correct an issue with my variables (missing underscores)
