@@ -3,7 +3,7 @@
 # Description
 For this assignment, the goal was to complete two challenges using Python. The first challenge, PyBank, involved analyzing the financial records of a company. A script was made to read a CSV file of budget data and generate the results of the financial analysis in the terminal. Additionally, a text file was exported to the "analysis" folder.
 
-In the second part of the challenge, PyPoll, the objective was to assist a small, rural town in modernizing their vote-counting process. A Python script was created to analyze the votes and calculate the results. Similar to PyBank, the results were displayed in the terminal and a text file was exported to the "analysis" folder containing the findings.
+In the second part of the challenge, PyPoll, the objective was to assist a small, rural town in modernizing their vote-counting process by creating a python script to analyze the votes. Similar to PyBank, the results were displayed in the terminal and a text file was exported to the "analysis" folder containing the findings.
 
 # Directory Structure
 In both the "PyBank" and "PyPoll" directories, you will find the following components:
