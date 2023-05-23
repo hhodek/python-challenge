@@ -20,5 +20,5 @@ In both the "PyBank" and "PyPoll" directories, you will find the following compo
 3. Referenced Pan's repository (https://github.com/pmarbibi12/python-challenge) for coding a new line in textfiles (\n)
 4. Referenced the following website for help with looping functions in Pypoll https://www.freecodecamp.org/news/python-looping-functions/ 
 5. Also referenced the following for additional help with ds file https://gist.github.com/lohenyumnam/2b127b9c3d1435dc12a33613c44e6308 
-6. Used ChatGPT to edit formatting and grammer of Readme OpenAI and provide tips and explanations for code. (2023). ChatGPT (Version GPT-3.5) [Large language model]. https://chat.openai.com/chat
+6. Used ChatGPT to edit formatting and grammer of Readme OpenAI and provide tips and explanations for code. (2023). ChatGPT (Version GPT-3.5). https://chat.openai.com/chat
 
