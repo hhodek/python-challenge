@@ -15,13 +15,13 @@ greatestdecrease = ["", 9999999999]
 with open (csvpath, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-
+    
         #Initiliazing and setting variables
-    total_months = 1
+    total_months = 0
     total_revenue = 0
     jandata = next(csvreader)
-    totalmonths = total_months + 1
-    totalrevenue = total_revenue + int(jandata[1])
+    total_months = total_months + 1
+    total_revenue = total_revenue + int(jandata[1])
     previousrevenue = int(jandata[1])
 
         #For loop
@@ -54,7 +54,7 @@ with open (csvpath, 'r') as csvfile:
     #Calculating and formatting average change       
 averagechange = round((sum(netchangelist)/len(netchangelist)), 2)
 
-    #Increase/Decrease in profits variables
+#     #Increase/Decrease in profits variables
 increasedate = greatestincrease[0]
 increaseamount = greatestincrease[1]
 decreasedate = greatestdecrease[0]
@@ -70,18 +70,18 @@ print(f"Average Change: ${averagechange}")
 print(f"Greatest Increase in Profits: {increasedate} (${increaseamount})")
 print(f"Greatest Decrease in Profits: {decreasedate} (${decreaseamount})")
 
-    #Setting output path
+#     #Setting output path
 outputpath = os.path.join( 'analysis' , 'FinancialAnalysisResults.txt')
 
-    #Writing results as a txtfile in analysis folder
+#     #Writing results as a txtfile in analysis folder
 with open(outputpath, 'w') as txtfile:
-     txtfile.write('\n'"Financial Analysis"'\n')
-     txtfile.write('\n'"-----------------------"'\n')
-     txtfile.write(f"\nTotal Months: {total_months}\n")
-     txtfile.write(f"\nTotal: ${total_revenue}\n")
-     txtfile.write(f"\nAverage Change: ${averagechange}\n")
-     txtfile.write(f"\nGreatest Increase in Profits: {increasedate} (${increaseamount})\n")
-     txtfile.write(f"\nGreatest Decrease in Profits: {decreasedate} (${decreaseamount})\n")
+    txtfile.write('\n'"Financial Analysis"'\n')
+    txtfile.write('\n'"-----------------------"'\n')
+    txtfile.write(f"\nTotal Months: {total_months}\n")
+    txtfile.write(f"\nTotal: ${total_revenue}\n")
+    txtfile.write(f"\nAverage Change: ${averagechange}\n")
+    txtfile.write(f"\nGreatest Increase in Profits: {increasedate} (${increaseamount})\n")
+    txtfile.write(f"\nGreatest Decrease in Profits: {decreasedate} (${decreaseamount})\n")
 
 
 
