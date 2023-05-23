@@ -13,5 +13,5 @@ In each of the PyBank and PyPoll directories you will find 3 things: a "Resource
 2. Referenced class activities and VBA-Challenge for reading/writing files/average change calculations/loops/functions
 3. Referenced Pan's repository (https://github.com/pmarbibi12/python-challenge) for coding a new line in textfiles (\n)
 4. Referenced the following website for help with looping functions in Pypoll https://www.freecodecamp.org/news/python-looping-functions/ 
-
+5. Also referenced the following for help with ds file https://gist.github.com/lohenyumnam/2b127b9c3d1435dc12a33613c44e6308 
 
